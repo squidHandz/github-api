@@ -1,0 +1,23 @@
+
+html body{
+    margin: 0;
+    border: 0;
+    font-size: 100%;
+    background: #005AA3;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-self: center;
+    background: #e2e2e2;
+    margin: 2%;
+    padding: 2%;
+}
+
+li {
+	list-style-type: none;
+
+}

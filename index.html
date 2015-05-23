@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="gitApp">
+<head>
+	<title>GitHub API</title>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body ng-controller="myCtrl" class="wrapper">
+
+	<form class="form-inline">
+		<div>
+			<input type="text" class="form-control" ng-model="searchText" placeholder="Git User">
+			<button class="btn btn-primary" ng-click="getUserData()"> Submit </button>
+
+		</div>
+	</form>
+
+	<section ng-model="searchResults" ng-hide="!searchResults"> Your Search Results:
+		<ul>
+			<li>Name:  {{user.Name}}</li>
+			<li>@:  {{user.UserID}}</li>
+			<li>Hailing From:  {{user.From}}</li>
+			<li>Mugshot:  <img src="{{user.Avatar}}" class="img-circle"></li>
+		</ul>
+	</section>
+
+
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-route.min.js'></script>
+<script src="app.js"></script>
+<script src="controller.js"></script>
+<script src="service.js"></script>
+</body>
+</html>
